@@ -1,0 +1,143 @@
+	
+	
+	*{
+		margin:0;
+	}
+
+	header {
+		height:40px;
+		display: block;
+		background-color: #003366;
+	}
+	
+	#progetto{
+		padding-left:30px;
+		padding-top:10px;
+		color: white;
+	}
+	
+    
+	#primo_contenitore{
+		padding-top:20px;
+		padding-left:30px;
+		background-color: #e4edf6;
+		padding-bottom:40px;
+		padding-right:100px;
+	}
+	
+	.contenitore1{
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 6%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    float:left;
+    width: 100%;
+}
+
+article {
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+
+.img_header{
+    width: auto;
+    height: 45px;
+    border-radius: 7px;
+}
+	
+.p_hero{
+    padding-bottom: 10px;
+}
+
+.like_bottom{
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    text-decoration: none;
+	cursor: pointer;
+}
+.par{
+    padding-top: 20px;
+    padding-bottom: 12px;
+}
+
+.tech_bottom{
+    
+    border: 1px solid blue;
+    border-bottom-color: blue;
+    color:#ffffff;
+    background-color: #3484be;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 5px;
+	cursor: pointer;
+    
+}
+
+.classe_articoli img{
+    margin-bottom: 12px;
+}
+
+#footer{
+    padding-left: 30px;
+}
+
+#linea{
+    padding-top: 45px;
+}
+
+
+#cookie{
+    height:50px;
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color: #003366;
+    color:white;
+}
+
+
+.like_bottom_green{
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    text-decoration: none;
+	background-color: #5cb85c;
+	cursor: pointer;
+}
+
+
+
+/*
+@media only screen and (min-width: 350px) and (max-width: 860px) {
+/*aside .media .media--img {width: 100px; height: auto;}
+width:100px;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+article p,#lanci-video .media p, #lanci-blog p {line-height: 1.2;}
+aside .media .media--img {width: 100px; height: auto;}
+}
+*/
+
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+	
+	.classe_articoli{
+		width:100%;
+	}
+	
+}
+
+
+
+
+
+
+
+
