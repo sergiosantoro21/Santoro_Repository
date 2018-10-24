@@ -21,7 +21,7 @@
 		padding-top:20px;
 		padding-left:30px;
 		background-color: #e4edf6;
-		padding-bottom:40px;
+		
 		padding-right:100px;
 	}
 	
@@ -41,10 +41,13 @@ article {
     padding: 10px;
 }
 
+
+
 .img_header{
     width: auto;
     height: 45px;
     border-radius: 7px;
+	margin: 0px;
 }
 	
 .p_hero{
@@ -75,6 +78,24 @@ article {
     padding: 5px;
 	cursor: pointer;
     
+}
+
+
+#primo{
+	margin-left: 60px;
+}
+
+#secondo{
+	margin-top: 20px;
+	width:auto;
+	height:auto;
+	margin-left:8px;
+}
+
+.octicon-mark-github{
+	width:46px;
+	height:auto;
+	background-color:#337ab7;
 }
 
 .classe_articoli img{
@@ -112,29 +133,23 @@ article {
 
 
 
-/*
-@media only screen and (min-width: 350px) and (max-width: 860px) {
-/*aside .media .media--img {width: 100px; height: auto;}
-width:100px;
+img{
+	width: 100%;
+    height: auto;
 }
 
 
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-article p,#lanci-video .media p, #lanci-blog p {line-height: 1.2;}
-aside .media .media--img {width: 100px; height: auto;}
-}
-*/
+.container{
 
-
-@media only screen and (min-width: 300px) and (max-width: 800px) {
-	
-	.classe_articoli{
-		width:100%;
-	}
-	
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-
+.btn-sm{
+	margin-top: 10px;
+}
 
 
 

@@ -6,6 +6,7 @@
 	<head>
 		<title>Il mio progetto</title>
 		<link rel="stylesheet" href="src\css\Progetto_Santoro.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<meta charset="UTF-8">
 		<meta name="description" content="Latin poetry">
 		<meta name="keywords" content="poetry,poet">
@@ -15,49 +16,65 @@
 	</head>
 	<body>
 		<header>
-			<h4 id="progetto">Project name</h4>
+			<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+			</div>	
+
+			</nav>
 		</header>
 		<div id="cookie">
             <p>This is a cookie policy click <a href="#"  onclick="rimuoviCookie()">Here</a> to close it.</p>
         </div>
+
+		
 		<div id="primo_contenitore">
-			<h1>Hello, World!</h1>
-			<p class="p_hero">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			<div class="jumbotron">
+				<h1>Hello, World!</h1>      
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-            <a href="#"><img src="src\img\git.png" alt="prima foto" width="auto" height="45px" class="img_header"></a>
-            <a href="#"><img src="src\img\slide.png" alt="prima foto" width="auto" height="45px" class="img_header"></a>
-            
-		</div>
-        <section class = "contenitore1">
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="https://github.com/" class="btn btn-primary" type="button" id="primo">
+				<svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true" fill='#ffffff'>
+				<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+				</svg>
+				</a>
 
-				        <article class="classe_articoli">
-				            <h1 class="classe_titolo">Article Title 1</h1>
-				            <img src="src\img\title1.PNG" alt="prima foto" width="100%" height="auto">
-				             <a href="#" class="tech_bottom">tech</a>
+				<button type="button" class="btn btn-primary btn-lg" id="secondo">Slides >></button>
+			</div>
+        
+        
+		</div>
+	<div class="container">	
+        <div class = "row">
+
+				        <article class="col-xs-12 col-sm-6 col-md-4">
+				            <h2 class="classe_titolo">Article Title 1</h2>
+				            <img src="src\img\title1.JPG" alt="prima foto">
+				             <button type="button" class="btn btn-primary btn-sm">tech</button>
                             <p class="par">ClientJohn Doe Date03.01.2013 Category JavaScript, CSS, HTML Donec id elit non mi porta gravida at eget metus. 
 					           Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Donec id elit non mi
 					           porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.</p>
                             <span class="like_bottom" id ="primo">like</span>
 				        </article>
 		      
-				        <article class="classe_articoli">
-				        <h1 class="classe_titolo">Article Title 2</h1>
-				        <img src="src\img\title2.PNG" alt="seconda foto" width="100%" height="auto">
-				             <a href="#" class="tech_bottom">tech</a>
+				        <article class="col-xs-12 col-sm-6 col-md-4">
+				        <h2 class="classe_titolo">Article Title 2</h2>
+				        <img src="src\img\title2.JPG" alt="seconda foto">
+				             <button type="button" class="btn btn-primary btn-sm">tech</button>
                             <p class="par">ClientJohn Doe Date03.01.2013 Category JavaScript, CSS, HTML Donec id elit non mi porta gravida at eget metus. 
 					       Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Donec id elit non mi
 					       porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur</p>
                            <span class="like_bottom" id="secondo">like</span>
 				        </article>
 
-				        <article class="classe_articoli">
-				        <h1 class="classe_titolo">Article Title 3</h1>
-				        <img src="src\img\title3.PNG" alt="terza foto" width="100%" height="auto">
-				            <a href="#" class="tech_bottom">tech</a>
+				        <article class="col-xs-12 col-sm-6 col-md-4">
+				        <h2 class="classe_titolo">Article Title 3</h2>
+				        <img src="src\img\title3.JPG" alt="terza foto">
+				            <button type="button" class="btn btn-primary btn-sm">tech</button>
                             <p class="par">ClientJohn Doe Date03.01.2013 Category JavaScript, CSS, HTML Donec id elit non mi porta gravida at eget metus. 
 					        Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Donec id elit non mi
 					        porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur</p>
@@ -66,10 +83,10 @@
 			
             
             
-				        <article class="classe_articoli">
-				        <h1 class="classe_titolo">Article Title 4</h1>
-				        <img src="src\img\title4.PNG" alt="quarta foto" width="100%" height="auto">
-				             <a href="#" class="tech_bottom">tech</a>
+				        <article class="col-xs-12 col-sm-6 col-md-4">
+				        <h2 class="classe_titolo">Article Title 4</h2>
+				        <img src="src\img\title4.PNG" alt="quarta foto">
+				             <button type="button" class="btn btn-primary btn-sm">tech</button>
                             <p class="par">ClientJohn Doe Date03.01.2013 Category JavaScript, CSS, HTML Donec id elit non mi porta gravida at eget metus. 
 					       Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Donec id elit non mi
 					       porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur</p>
@@ -77,13 +94,16 @@
 				        </article>
 			
 			
-        </section>
-		
+        </div>
+	</div>	
 			<footer>
                 <hr id="linea">
                 <p id="footer">&copy 2018 Company, Inc.</p>
 			</footer>
 			
-	<script type="text/javascript" src="src\js\Progetto_Santoro.js"></script>	
+	<script type="text/javascript" src="src\js\Progetto_Santoro.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>	
 	</body>
 </html>
