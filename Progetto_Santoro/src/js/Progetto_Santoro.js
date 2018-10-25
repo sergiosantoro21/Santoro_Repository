@@ -1,57 +1,39 @@
 
 
 
-function rimuoviCookie(){
-	
-
-	var element = document.getElementById("cookie");
-	element.parentElement.removeChild(element);
-
-
-}
 
 
 
-primo.addEventListener("click",function(){
-	
-	if(primo.className == "like_bottom")
-		primo.className="like_bottom_green";
-	else
-		primo.className="like_bottom";
-	
-	
-	
+$("#cookie").click(function () { 
+          $(this).hide();
+
 });
 
-secondo.addEventListener("click",function(){
-	
-	if(secondo.className == "like_bottom")
-		secondo.className="like_bottom_green";
+ $(".btn-default").click(function () { 
+     if($(this).hasClass("btn-default"))
+          $(this).removeClass("btn-default").addClass("btn-whatever"); 
 	else
-		secondo.className="like_bottom";
-	
-	
-	
+		$(this).removeClass("btn-whatever").addClass("btn-default"); 
 });
+  
+/*
+$(".btn-default").click(function () { 
+    $(this).toggleClass("btn-whatever");
+});
+ */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-terzo.addEventListener("click",function(){
-	
-	if(terzo.className == "like_bottom")
-		terzo.className="like_bottom_green";
-	else
-		terzo.className="like_bottom";
-	
-	
-	
-});
-
-quattro.addEventListener("click",function(){
-	
-	if(quattro.className == "like_bottom")
-		quattro.className="like_bottom_green";
-	else
-		quattro.className="like_bottom";
-	
-	
-	
-});
