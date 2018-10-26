@@ -3,7 +3,7 @@
 }
 header {
   height: 40px;
-  display: block;
+  display: "block";
   background-color: #003366;
 }
 #progetto {
@@ -93,6 +93,7 @@ article {
   width: 100%;
   background-color: #003366;
   color: white;
+  z-index: 0;
 }
 .like_bottom_green {
   padding: 7px;
