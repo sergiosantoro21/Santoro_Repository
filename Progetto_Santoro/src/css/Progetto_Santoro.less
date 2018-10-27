@@ -1,166 +1,62 @@
+@import "variables.less";
+@import "function.less";
 
-
-	*{
-		margin:0;
-	}
-
-	header {
-		height:40px;
-		display: block;
-		background-color: #003366;
-	}
-
-	#progetto{
-		padding-left:30px;
-		padding-top:10px;
-		color: white;
-	}
-
-
-	#primo_contenitore{
-		padding-top:20px;
-		padding-left:30px;
-		background-color: #e4edf6;
-
-		padding-right:100px;
-	}
-
-	.contenitore1{
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 6%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    float:left;
-    width: 100%;
+* {
+  .margin_function(@zeropixel);
 }
 
-article {
-    width: 30%;
-    float: left;
-    padding: 10px;
+.jumbotron{
+  .padding_function(@dimensione);
 }
-
-
-
-.img_header{
-    width: auto;
-    height: 45px;
-    border-radius: 7px;
-	margin: 0px;
-}
-
-.p_hero{
-    padding-bottom: 10px;
-}
-
-.like_bottom{
-    padding: 7px;
-    border: 1px solid grey;
-    border-radius: 7px;
-    text-decoration: none;
-	cursor: pointer;
-}
-.par{
-    padding-top: 20px;
-    padding-bottom: 12px;
-}
-
-.tech_bottom{
-
-    border: 1px solid blue;
-    border-bottom-color: blue;
-    color:#ffffff;
-    background-color: #3484be;
-    text-decoration: none;
-    border-radius: 7px;
-    font-size: 16px;
-    padding: 5px;
-	cursor: pointer;
-
-}
-
-
-#primo{
-	margin-left: 60px;
-}
-
-#secondo{
-	margin-top: 20px;
-	width:auto;
-	height:auto;
-	margin-left:8px;
-}
-
-.octicon-mark-github{
-	width:46px;
-	height:auto;
-	background-color:#337ab7;
-}
-
-.classe_articoli img{
-    margin-bottom: 12px;
-}
-
-#footer{
-    padding-left: 30px;
-}
-
-#linea{
-    padding-top: 45px;
-}
-
-
-#cookie{
-    height:50px;
-    display: flex;
-    position: fixed;
-    bottom: 0%;
-    width: 100%;
-    background-color: #003366;
-    color:white;
-}
-
-
-.like_bottom_green{
-    padding: 7px;
-    border: 1px solid grey;
-    border-radius: 7px;
-    text-decoration: none;
-	background-color: #5cb85c;
-	cursor: pointer;
-}
-
-
-
-img{
-	width: 100%;
-    height: auto;
-}
-
 
 .container{
-
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+  .margin_left_function(@dimensione);
+  .padding_function(@zeropixel);
 }
 
-.btn-sm{
-	margin-top: 10px;
+.navbar-brand{
+  .padding_left_function(@dimensione);
 }
 
-label label-primary{
-	width:100%;
-	height:100%;
+.octicon-mark-github {
+  .width_function(@width_github_button);
+  .height_function(@height_github_button);
+  .background_color_function(@background_color_github_button);
+  .margin_right_function(@margin_right_github_button);
+  .margin_left_function(@margin_left_github_button);
 }
 
-.btn-whatever{
-	background-color:#5cb85c;
-	border-color:green;
+
+#footer {
+  .padding_left_function(@dimensione);
+}
+#linea {
+  .padding_top_function(@padding_top_linea);
 }
 
-div p{
-	 z-index: 0;
+#cookie {
+  .height_function(@height_cookie);
+  display: flex;
+  position: fixed;
+  .bottom_function(@bottom_cookie);
+  .width_function(@width_cookie);
+  .background_color_function(@background_color_cookie);
+  .color_function(@color_cookie);
+  .z_index_function(@z_index_cookie);
 }
+
+img {
+  .width_function(@img_weight);
+  .height_function(auto);
+}
+
+label label-primary {
+  .width_function(@label_primary_width);
+  .height_function(@label_primary_height);
+}
+
+.btn-whatever {
+  .background_color_function(@btn_whatever_backgroud_color);
+  .border_color_function(@btn_whatever_border_color);
+}
+ 

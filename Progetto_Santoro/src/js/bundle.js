@@ -10381,24 +10381,52 @@ $("#cookie").click(function () {
 		$(this).removeClass("btn-whatever").addClass("btn-default");
 });
 
-function doAjax(){
 
+$(document).ready(function(){
 	$.ajax({
-		url: 'file.json',
-		mathod: 'GET',
-		success: function (result){
-			var output='';
-			for(var i=0;i<result.lenght;i++){
-				output+=result[1].nome1;
+  // definisco il tipo della chiamata
+  	type: 'GET',
+  // specifico la URL della risorsa da contattare
+  	url: 'file.json',
 
+		dataType: 'json',
+  // passo dei dati alla risorsa remota
 
-
+  	success: function(result){
+			var str='';
+			for(var i=0;i<result.length;i++){
+				str+=result[i].text;
 			}
-			$('#sezione').innerHTML(output);         
-		}
+		$('#sezione').html('<p>'+str+'</p>');
+
+  	},
+  // ed una per il caso di fallimento
+  	error: function(){
+    	alert("Chiamata fallita!!!");
+  	}
 	});
+});
 
 
-};
+/*
+$(document).ready(function(){
+$('#button_send').on('click', function () {
+$.ajax({
+    type: 'POST',
+    url: 'agenda.json',
+    data: { get_param: 'value' },
+    dataType: 'json',
+    success: function (data) {
+        $( "#send" ).remove();
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', {
+                text: element.Nome + " " + element.Cognome
+            }));
+        });
+    }
+});
+});
+});
+*/
 
 },{"jquery":1}]},{},[2]);
