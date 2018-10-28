@@ -1,0 +1,67 @@
+@import "variables.less";
+@import "function.less";
+
+* {
+  .margin_function(@zeropixel);
+}
+
+.jumbotron{
+  .padding_function(@dimensione);
+}
+
+.container{
+  .margin_left_function(@dimensione);
+  .padding_function(@zeropixel);
+}
+
+.navbar-brand{
+  .padding_left_function(@dimensione);
+}
+
+.octicon-mark-github {
+  .width_function(@width_github_button);
+  .height_function(@height_github_button);
+  .background_color_function(@background_color_github_button);
+  .margin_right_function(@margin_right_github_button);
+  .margin_left_function(@margin_left_github_button);
+}
+
+
+#footer {
+  .padding_left_function(@dimensione);
+}
+#linea {
+  .padding_top_function(@padding_top_linea);
+}
+
+#cookie {
+  .height_function(@height_cookie);
+  display: flex;
+  position: fixed;
+  .bottom_function(@bottom_cookie);
+  .width_function(@width_cookie);
+  .background_color_function(@background_color_cookie);
+  .color_function(@color_cookie);
+  .z_index_function(@z_index_cookie);
+}
+
+img {
+  .width_function(@img_weight);
+  .height_function(auto);
+}
+
+label label-primary {
+  .width_function(@label_primary_width);
+  .height_function(@label_primary_height);
+}
+
+.badge {
+
+    .background_color_function(@background_color_github_button);
+
+}
+
+.btn-whatever { 
+  .background_color_function(@btn_whatever_backgroud_color);
+  .border_color_function(@btn_whatever_border_color);
+}
