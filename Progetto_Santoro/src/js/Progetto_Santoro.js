@@ -1,17 +1,11 @@
 
 
 const $=require('jquery');
+const M=require('mustache');
 
 
 $("#cookie").click(function () {
 	$(this).hide();
-});
-
- $(".btn-default").click(function () {
-     if($(this).hasClass("btn-default"))
-          $(this).removeClass("btn-default").addClass("btn-whatever");
-	else
-		$(this).removeClass("btn-whatever").addClass("btn-default");
 });
 
 
@@ -26,38 +20,32 @@ $(document).ready(function(){
   // passo dei dati alla risorsa remota
 
   	success: function(result){
-			var str='';
+			var template = "<h2>{{Titolo}}</h2>"+
+											"<img src={{Immagine}} alt=prima foto>"+
+											"<span class=badge badge-primary> {{Tech}} </span>"+
+											"<p>{{Paragrafo}}</p>"+
+											"<button type=button class=btn btn-default>{{Like}}</button>";
+
+			var html;
 			for(var i=0;i<result.length;i++){
-				str+=result[i].text;
+				html = M.to_html(template, result[i]);
+				$('#'+(i+1)).html(html);
 			}
-		$('#sezione').html('<p>'+str+'</p>');
+
 
   	},
   // ed una per il caso di fallimento
   	error: function(){
     	alert("Chiamata fallita!!!");
-  	}
+  	},
+
+
+
+		complete: function(){
+			$('.btn, .btn-default').on('click', event =>{
+				$(event.currentTarget).toggleClass('btn-whatever');
+			});
+		}
+
 	});
 });
-
-
-/*
-$(document).ready(function(){
-$('#button_send').on('click', function () {
-$.ajax({
-    type: 'POST',
-    url: 'agenda.json',
-    data: { get_param: 'value' },
-    dataType: 'json',
-    success: function (data) {
-        $( "#send" ).remove();
-        $.each(data, function(index, element) {
-            $('body').append($('<div>', {
-                text: element.Nome + " " + element.Cognome
-            }));
-        });
-    }
-});
-});
-});
-*/
