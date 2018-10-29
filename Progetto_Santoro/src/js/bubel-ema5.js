@@ -10597,30 +10597,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			$(this).hide();
 		});
 
-		/*
-   $(".btn-default").click(function () {
-       if($(this).hasClass("btn-default"))
-            $(this).removeClass("btn-default").addClass("btn-whatever");
-  	else
-  		$(this).removeClass("btn-whatever").addClass("btn-default");
-  });*/
-
-		/*
-  $( document ).ajaxComplete(function() {
-  		$(".btn-default").click(function () {
-  				if($(this).hasClass("btn-default"))
-  					 	$(this).removeClass("btn-default").addClass("btn-whatever");
-  	 			else
-  		 				$(this).removeClass("btn-whatever").addClass("btn-default");
-   		});
-  });*/
-
 		$(document).ready(function () {
 			$.ajax({
 				// definisco il tipo della chiamata
 				type: 'GET',
 				// specifico la URL della risorsa da contattare
-				url: 'file.json',
+				url: '/articoli',
 
 				dataType: 'json',
 				// passo dei dati alla risorsa remota
