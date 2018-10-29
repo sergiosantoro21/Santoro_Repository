@@ -4,6 +4,9 @@
 .jumbotron {
   padding: 60px;
 }
+.navbar-inverse {
+  margin-bottom: 0px;
+}
 .container {
   margin-left: 60px;
   padding: 0px;
