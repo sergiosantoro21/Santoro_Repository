@@ -10608,13 +10608,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				// passo dei dati alla risorsa remota
 
 				success: function success(result) {
-					var template = "<h2>{{Titolo}}</h2>" + "<img src={{Immagine}} alt=prima foto>" + "<span class=badge badge-primary> {{Tech}} </span>" + "<p>{{Paragrafo}}</p>" + "<button type=button class=btn btn-default>{{Like}}</button>";
-
-					var html;
-					for (var i = 0; i < result.length; i++) {
-						html = M.to_html(template, result[i]);
-						$('#' + (i + 1)).html(html);
-					}
+					var template = $('#template').html();
+					var rendered = M.render(template, result);
+					$('#articolo').html(rendered);
 				},
 				// ed una per il caso di fallimento
 				error: function error() {
@@ -10622,11 +10618,34 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				},
 
 				complete: function complete() {
-					$('.btn, .btn-default').on('click', function (event) {
-						$(event.currentTarget).toggleClass('btn-whatever');
+					$('article .btn, .btn-default').on('click', function () {
+						myfunction($(this));
 					});
 				}
-
 			});
 		});
+
+		function myfunction(self) {
+
+			//console.log('Log prima della chiamata:' + self.attr('data-like'));
+			$.ajax({
+				url: '/articles',
+				method: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({ id: self.attr('Id'), like: self.attr('data-like') }),
+				success: function success(result) {
+					//console.log('Log dopo della chiamata:' + result);
+					if (result === 'ok') {
+						self.toggleClass("btn-success");
+						self.attr('data-like', result);
+					}
+
+					//  console.log('valore di data-like:' + self.attr('data-like'));
+				},
+				error: function error(_error) {
+					console.log("Errore insuccesso setLike:");
+					console.log(_error);
+				}
+			});
+		}
 	}, { "jquery": 1, "mustache": 2 }] }, {}, [3]);

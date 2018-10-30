@@ -4,9 +4,11 @@
   "description": "\"my project\"",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bootstrap": "^3.3.7",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
+    "lowdb": "^1.0.0",
     "mustache": "^3.0.0"
   },
   "devDependencies": {

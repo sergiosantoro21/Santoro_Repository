@@ -46,18 +46,25 @@
 
 	<div class="container">
 				<div class = "row">
-
-								<article class="col-xs-12 col-sm-6 col-md-4" id="1">
+						<section id="articolo" class=row>
+							<script id="template" type="x-tmpl-mustache">
+								{{#articles}}
+								<article class="col-xs-12 col-sm-6 col-md-4" id={{Id}}>
+										<h2>{{Titolo}}</h2>
+										<img src={{Immagine}} alt=prima foto>
+										<span class=badge badge-primary> {{Tech}} </span>
+										<p>{{Paragrafo}}</p>
+										{{^Like}}
+	        						<button id={{Id}} type="button" class="btn btn-default" name="button" data-like={{Like}}>like</button>
+	        					{{/Like}}
+	        					{{#Like}}
+	        						<button id={{Id}} type="button" class="btn btn-success" name="button" data-like={{Like}}>like</button>
+	        					{{/Like}}
 								</article>
+								{{/articles}}
+							</script>
+						</<section>
 
-				        <article class="col-xs-12 col-sm-6 col-md-4" id="2">
-				        </article>
-
-				        <article class="col-xs-12 col-sm-6 col-md-4" id="3">
-				        </article>
-
-								<article class="col-xs-12 col-sm-6 col-md-4" id="4">
-								</article>
 			</div>
 	</div>
 
